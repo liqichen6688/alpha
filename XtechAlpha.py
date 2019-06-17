@@ -20,7 +20,7 @@ def ts_argmin(x: pd.core.frame.DataFrame, d: int) -> pd.core.frame.DataFrame:
 
 def ts_rank(x: pd.core.frame.DataFrame, d: int) -> pd.core.frame.DataFrame:
 
-    return x.rolling(d).apply(lambda x: d + 1 - rankdata(x)[-1])
+    return x.rolling(d).apply(lambda x: rankdata(x)[-1])
 
 
 def sum(x: pd.core.frame.DataFrame, d: int) -> pd.core.frame.DataFrame:
